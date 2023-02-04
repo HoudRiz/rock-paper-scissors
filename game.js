@@ -1,13 +1,13 @@
 // Machine chooses a random value within array
-const choiceOption = ['Rock', 'Paper', 'Scissor'];
+const choiceOption = ['rock', 'paper', 'scissor'];
 const random = Math.floor(Math.random() * choiceOption.length);
 console.log(choiceOption[random]);    
 
-// Human chooses random value 
+// Human chooses random value  Convert raw input into correct form
 
-let playerInput = prompt('Enter Rock, Paper or Scissor').toLowerCase();
-console.log(playerInput);
-
-// Convert raw input into correct form
-let playerSelection =  playerInput.charAt(0).toUpperCase() + playerInput.slice(1);
-console.log (playerSelection);
+let playerSelector = function(string) {
+    return string.toLowerCase() ;
+  }
+  
+  console.log(playerSelector(prompt('Type Rock, paper or Scissors')))
+  
