@@ -12,21 +12,25 @@ playerScore = 0 //initializing score of player
 
 //function  for winning or losing
 function playRound(playerSelection , computerSelection){
-if (playerSelection == computerSelection) {
-  alert('It is a draw!');
-  
-} else if ((playerSelection  == 'rock' && computerSelection == 'scissor') ||
-  (playerSelection  == 'paper' && computerSelection == 'rock') ||
-  (playerSelection  == 'scissor' && computerSelection == 'paper'))
-         
-{
-    alert (`you win! ${playerSelection} beats ${computerSelection}`)
-    playerScore++
+  if ((playerSelection == 'rock') || (playerSelection == 'paper') || (playerSelection == 'scissor')){
+    if (playerSelection == computerSelection) {
+      alert('It is a draw!');
+      
+    } else if ((playerSelection  == 'rock' && computerSelection == 'scissor') ||
+      (playerSelection  == 'paper' && computerSelection == 'rock') ||
+      (playerSelection  == 'scissor' && computerSelection == 'paper'))
+            
+    {
+        alert (`you win! ${playerSelection} beats ${computerSelection}`)
+        playerScore++
 
-}else {
-    alert (`you have lost! ${computerSelection} beats ${playerSelection}`);
-    computerScore++
-}}
+    }else {
+        alert (`you have lost! ${computerSelection} beats ${playerSelection}`);
+        computerScore++
+    }}else{
+      alert ('The input you have entered is invalid.')
+    }
+}
 
 //finds out who wins the game
 let gameWinner= function (computerScore, playerScore) {
