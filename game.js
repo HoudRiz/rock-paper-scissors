@@ -46,6 +46,7 @@ let gameWinner= function (computerScore, playerScore) {
 };
 
 //loop to make game into 5 rounds (need to convert into a function?)
+function game(){
 for (let i = 0; i < 5; i++) {
   let playerValue = playerInput(prompt('Type Rock, paper or Scissors') );
   let computerValue =getComputerChoice(['rock','paper', 'scissor']);
@@ -54,3 +55,6 @@ for (let i = 0; i < 5; i++) {
 }
 
 gameWinner(computerScore,playerScore)
+}
+
+game()
