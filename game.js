@@ -5,15 +5,13 @@ let getComputerChoice = function (choiceOption) {
 }
 
 let computerValue =getComputerChoice(['rock','paper', 'scissor']);
-console.log (computerValue) //calling the function
-  
-// Human chooses random value  Convert raw input into correct form
 
-let playerInput = function(string) {
-    return string.toLowerCase() ;
-  } 
+  
+
+//function to convert string into desired format
+let playerInput = (string) => string.toLowerCase() 
 let playerValue = playerInput(prompt('Type Rock, paper or Scissors') );
-console.log (playerValue); // calling the function
+
 
 //function  for winning or losing
 function playRound(playerSelection , computerSelection){
