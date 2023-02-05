@@ -1,8 +1,11 @@
-// Machine chooses a random value within array
-const choiceOption = ['rock', 'paper', 'scissor'];
-const random = Math.floor(Math.random() * choiceOption.length);
-console.log(choiceOption[random]);    
+// machine choosing function
+let computerSelector = function (choiceOption) {
+  let random =  Math.floor(Math.random() * choiceOption.length);
+  return (choiceOption[random]);    
+}
 
+console.log(computerSelector(['rock','paper', 'scissor']))
+  
 // Human chooses random value  Convert raw input into correct form
 
 let playerSelector = function(string) {
@@ -10,4 +13,6 @@ let playerSelector = function(string) {
   }
   
   console.log(playerSelector(prompt('Type Rock, paper or Scissors')))
-  
+
+//conditions for winning or losing
+
