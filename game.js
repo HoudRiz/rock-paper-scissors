@@ -7,37 +7,40 @@ let getComputerChoice = function (choiceOption) {
 //function to convert string into desired format
 let playerInput = (string) => string.toLowerCase() 
 
-let lossCount = 0
-let winCount = 0
+computerScore = 0
+playerScore = 0
 //function  for winning or losing
 function playRound(playerSelection , computerSelection){
 if (playerSelection == computerSelection) {
   alert('It is a draw!');
-
-} else if (playerSelection  == 'rock' && computerSelection == 'scissor') {
-   alert (`you win! ${playerSelection} beats ${computerSelection}`)
-
-} else if (playerSelection  == 'paper' && computerSelection == 'rock') {
-    alert (`you win! ${playerSelection} beats ${computerSelection}`)
-
-
-} else if (playerSelection  == 'scissor' && computerSelection == 'paper') {
-    alert (`you win! ${playerSelection} beats ${computerSelection}`)
-
   
+
+} else if ((playerSelection  == 'rock' && computerSelection == 'scissor') ||
+  (playerSelection  == 'paper' && computerSelection == 'rock') ||
+  (playerSelection  == 'scissor' && computerSelection == 'paper'))
+         
+{
+      alert (`you win! ${playerSelection} beats ${computerSelection}`)
+      playerScore++
+      console.log (playerScore)
 
 }else {
     alert (`you have lost! ${computerSelection} beats ${playerSelection}`);
-
+    computerScore++
+    console.log(computerScore)
 };
 
 }
+
+
 
 
 for (let i = 0; i < 5; i++) {
   let playerValue = playerInput(prompt('Type Rock, paper or Scissors') );
   let computerValue =getComputerChoice(['rock','paper', 'scissor']);
   playRound(playerValue,computerValue)
+
+  
 
 
 }
