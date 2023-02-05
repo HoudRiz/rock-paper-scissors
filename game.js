@@ -1,20 +1,20 @@
 // machine choosing function
-let computerSelector = function (choiceOption) {
+let getComputerChoice = function (choiceOption) {
   let random =  Math.floor(Math.random() * choiceOption.length);
   return (choiceOption[random]);    
 }
 const option = ['rock','paper', 'scissor'];
-let computerValue =computerSelector(option);
+let computerValue =getComputerChoice(option);
 console.log (computerValue)
   
 // Human chooses random value  Convert raw input into correct form
 
-let playerSelector = function(string) {
+let playerInput = function(string) {
     return string.toLowerCase() ;
   }
 rawInput = prompt('Type Rock, paper or Scissors') 
-console.log(playerSelector(rawInput))
-let playerValue = playerSelector(rawInput);
+console.log(playerInput(rawInput))
+let playerValue = playerInput(rawInput);
   
 
 //conditions for winning or losing
