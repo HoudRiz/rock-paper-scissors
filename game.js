@@ -5,20 +5,21 @@ let getComputerChoice = function (choiceOption) {
 }
 
 //function to convert string into desired format
-let playerInput = (string) => string.toLowerCase() 
+let playerInput = (string) => string.charAt(0).toUpperCase() + string.slice(1).toLowerCase()
+
 
 computerScore = 0 //initializing score of computer
 playerScore = 0 //initializing score of player
 
 //function  for winning or losing
 function playRound(playerSelection , computerSelection){
-  if ((playerSelection == 'rock') || (playerSelection == 'paper') || (playerSelection == 'scissor')){
+  if ((playerSelection == 'Rock') || (playerSelection == 'Paper') || (playerSelection == 'Scissor')){
     if (playerSelection == computerSelection) {
       alert('It is a draw!');
       
-    } else if ((playerSelection  == 'rock' && computerSelection == 'scissor') ||
-      (playerSelection  == 'paper' && computerSelection == 'rock') ||
-      (playerSelection  == 'scissor' && computerSelection == 'paper'))
+    } else if ((playerSelection  == 'Rock' && computerSelection == 'Scissor') ||
+      (playerSelection  == 'Paper' && computerSelection == 'Rock') ||
+      (playerSelection  == 'Scissor' && computerSelection == 'Paper'))
             
     {
         alert (`you win! ${playerSelection} beats ${computerSelection}`)
@@ -48,8 +49,8 @@ let gameWinner= function (computerScore, playerScore) {
 //loop to make game into 5 rounds (need to convert into a function?)
 function game(){
 for (let i = 0; i < 5; i++) {
-  let playerValue = playerInput(prompt('Type Rock, paper or Scissors') );
-  let computerValue =getComputerChoice(['rock','paper', 'scissor']);
+  let playerValue = playerInput(prompt('Type Rock, Paper or Scissor') );
+  let computerValue =getComputerChoice(['Rock','Paper', 'Scissor']);
   playRound(playerValue,computerValue)
 
 }
