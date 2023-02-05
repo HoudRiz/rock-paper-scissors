@@ -20,8 +20,8 @@ if (playerSelection == computerSelection) {
   (playerSelection  == 'scissor' && computerSelection == 'paper'))
          
 {
-      alert (`you win! ${playerSelection} beats ${computerSelection}`)
-      playerScore++
+    alert (`you win! ${playerSelection} beats ${computerSelection}`)
+    playerScore++
 
 }else {
     alert (`you have lost! ${computerSelection} beats ${playerSelection}`);
