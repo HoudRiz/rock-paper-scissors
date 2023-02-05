@@ -4,13 +4,12 @@ let getComputerChoice = function (choiceOption) {
   return (choiceOption[random]);    
 }
 
-let computerValue =getComputerChoice(['rock','paper', 'scissor']);
 
   
 
 //function to convert string into desired format
 let playerInput = (string) => string.toLowerCase() 
-let playerValue = playerInput(prompt('Type Rock, paper or Scissors') );
+
 
 
 //function  for winning or losing
@@ -31,4 +30,12 @@ if (playerSelection == computerSelection) {
     alert (`you have lost! ${computerSelection} beats ${playerSelection}`);
 };
 }
-playRound(playerValue,computerValue)
+
+
+for (let i = 0; i < 5; i++) {
+  let playerValue = playerInput(prompt('Type Rock, paper or Scissors') );
+  let computerValue =getComputerChoice(['rock','paper', 'scissor']);
+  playRound(playerValue,computerValue)
+
+
+}
