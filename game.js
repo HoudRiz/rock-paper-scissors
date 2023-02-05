@@ -15,20 +15,22 @@ let playerInput = function(string) {
 let playerValue = playerInput(prompt('Type Rock, paper or Scissors') );
 console.log (playerValue); // calling the function
 
-//conditions for winning or losing
-if (playerValue == computerValue) {
+//function  for winning or losing
+function playRound(playerSelection , computerSelection){
+if (playerSelection == computerSelection) {
   alert('It is a draw!');
 
-} else if (playerValue  == 'rock' && computerValue == 'scissor') {
-   alert (`you win! ${playerValue} beats ${computerValue}`)
+} else if (playerSelection  == 'rock' && computerSelection == 'scissor') {
+   alert (`you win! ${playerSelection} beats ${computerSelection}`)
 
-} else if (playerValue  == 'paper' && computerValue == 'rock') {
-    alert (`you win! ${playerValue} beats ${computerValue}`)
+} else if (playerSelection  == 'paper' && computerSelection == 'rock') {
+    alert (`you win! ${playerSelection} beats ${computerSelection}`)
 
-} else if (playerValue  == 'scissor' && computerValue == 'paper') {
-    alert (`you win! ${playerValue} beats ${computerValue}`)
+} else if (playerSelection  == 'scissor' && computerSelection == 'paper') {
+    alert (`you win! ${playerSelection} beats ${computerSelection}`)
 
 }else {
-    alert (`you have lost! ${computerValue} beats ${playerValue}`);
+    alert (`you have lost! ${computerSelection} beats ${playerSelection}`);
 };
-
+}
+playRound(playerValue,computerValue)
