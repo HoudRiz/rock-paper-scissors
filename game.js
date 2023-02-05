@@ -20,14 +20,14 @@ let playerValue = playerSelector(rawInput);
 //conditions for winning or losing
 if (playerValue == computerValue) {
   alert('It is a draw!');
-  
-} else if (playerValue  == 'rock' || computerValue == 'scissor') {
+
+} else if (playerValue  == 'rock' && computerValue == 'scissor') {
   alert (`you win! ${playerValue} beats ${computerValue}`)
 
-} else if (playerValue  == 'paper' || computerValue == 'rock') {
+} else if (playerValue  == 'paper' && computerValue == 'rock') {
   alert (`you win! ${playerValue} beats ${computerValue}`)
 
-} else if (playerValue  == 'scissor' || computerValue == 'paper') {
+} else if (playerValue  == 'scissor' && computerValue == 'paper') {
   alert (`you win! ${playerValue} beats ${computerValue}`)
 
 }else {
