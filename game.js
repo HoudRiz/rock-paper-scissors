@@ -22,16 +22,25 @@ if (playerSelection == computerSelection) {
 {
       alert (`you win! ${playerSelection} beats ${computerSelection}`)
       playerScore++
-      console.log (playerScore)
+
 
 }else {
     alert (`you have lost! ${computerSelection} beats ${playerSelection}`);
     computerScore++
-    console.log(computerScore)
+}}
+
+//finds out who wins the game
+let gameWinner= function (computerScore, playerScore) {
+  if (computerScore > playerScore) {
+    alert('The computer has won the game');
+
+  } else if (playerScore > computerScore) {
+    alert('The player has won the game');
+
+  } else {
+    alert('it was a draw!');
+  }
 };
-
-}
-
 
 
 
@@ -40,7 +49,5 @@ for (let i = 0; i < 5; i++) {
   let computerValue =getComputerChoice(['rock','paper', 'scissor']);
   playRound(playerValue,computerValue)
 
-  
-
-
 }
+gameWinner(computerScore,playerScore)
