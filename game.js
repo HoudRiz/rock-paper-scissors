@@ -44,12 +44,11 @@ let gameWinner= function (computerScore, playerScore) {
 
 //loop to make game into 5 rounds
 function game(){
-for (let i = 0; i < 5; i++) {
+
   let playerValue = playerInput(prompt('Type Rock, Paper or Scissor') );
   let computerValue =getComputerChoice(['Rock','Paper', 'Scissor']);
   playRound(playerValue,computerValue)
-}
-gameWinner(computerScore,playerScore)
+  gameWinner(computerScore,playerScore)
 }
 
 game()
