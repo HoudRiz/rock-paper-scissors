@@ -4,8 +4,17 @@ let getComputerChoice = function (choiceOption) {
   return (choiceOption[random]);    
 }
 
+function textContent(){
+   console.log(this.textContent)
+}
+const buttons = Array.from(document.querySelectorAll('button'));
+console.log(buttons)
+buttons.forEach(button => {
+  button.addEventListener('click' , textContent);  
+});
+
 //function to convert string into desired format
-let playerInput = (string) => string.charAt(0).toUpperCase() + string.slice(1).toLowerCase()
+let playerInput = (string) =>   //string.charAt(0).toUpperCase() + string.slice(1).toLowerCase()
 
 
 computerScore = 0 //initializing score of computer
@@ -45,7 +54,7 @@ let gameWinner= function (computerScore, playerScore) {
 //loop to make game into 5 rounds
 function game(){
 
-  let playerValue = playerInput(prompt('Type Rock, Paper or Scissor') );
+  //let playerValue = playerInput(prompt('Type Rock, Paper or Scissor') );
   let computerValue =getComputerChoice(['Rock','Paper', 'Scissor']);
   playRound(playerValue,computerValue)
   gameWinner(computerScore,playerScore)
