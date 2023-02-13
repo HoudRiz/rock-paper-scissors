@@ -38,27 +38,24 @@ function playRound(playerSelection , computerSelection){
 
 //finds out who wins the game
 let gameWinner= function (computerScore, playerScore) {
-  if (computerScore > playerScore) {
-    alert('The computer has won the game');
+  if (computerScore > 5) {
+    console.playerScore('The computer has won the game');
     
-} else if (playerScore > computerScore) {
-  alert('The player has won the game');
+} else if (playerScore > 5) {
+  console.log('The player has won the game');
   
-} else {
-  alert('it was a draw!');
-  
-}};
+} 
+};
 
 //loop to make game into 5 rounds
-//function game(){
+function game(){
   let computerValue =getComputerChoice(['Rock','Paper', 'Scissor']);
   buttons.forEach(button => {
     button.addEventListener('click' , function(){
       playRound (this.textContent,computerValue)
+    }) 
     })
-      
-    })
-  //gameWinner(computerScore,playerScore)
+  gameWinner(computerScore,playerScore)
 
-//}
-//game()
+}
+game()
