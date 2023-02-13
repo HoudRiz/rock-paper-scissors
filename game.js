@@ -39,7 +39,7 @@ function playRound(playerSelection , computerSelection){
 //finds out who wins the game
 let gameWinner= function (computerScore, playerScore) {
   if (computerScore > 5) {
-    console.playerScore('The computer has won the game');
+    console.log('The computer has won the game');
     
 } else if (playerScore > 5) {
   console.log('The player has won the game');
