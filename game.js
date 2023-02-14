@@ -33,11 +33,11 @@ function playRound(playerSelection , computerSelection){
 let gameWinner= function (computerScore, playerScore) {
   if (computerScore >= 5) {
     console.log('The computer has won the game');
-
+    restart()
     
 } else if (playerScore >= 5) {
     console.log('The player has won the game');
-   
+    restart()
   
 } 
 };
@@ -48,6 +48,9 @@ function restart () {
 }
 
 //loop to make game into 5 rounds
+restartButton.addEventListener ('click' , function() {
+  restart()
+} )
 let computerValue;
 buttons.forEach(button => {
   button.addEventListener('click', function() {
