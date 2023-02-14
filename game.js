@@ -1,18 +1,13 @@
 const buttons = Array.from(document.querySelectorAll('button'));
 const button = document.querySelector('button');
+const restartButton = document.querySelector('.restart-button')
+
+
 // machine choosing function
 let getComputerChoice = function (choiceOption) {
   let random =  Math.floor(Math.random() * choiceOption.length);
   return (choiceOption[random]);    
 }
-
-//function playerInput(){
- // console.log(this.textContent)
-//}
-
-
-//function to convert string into desired format
-
 
 computerScore = 0 //initializing score of computer
 playerScore = 0 //initializing score of player
@@ -47,6 +42,11 @@ let gameWinner= function (computerScore, playerScore) {
 } 
 };
 
+function restart () {
+  computerScore = 0
+  playerScore = 0
+}
+
 //loop to make game into 5 rounds
 let computerValue;
 buttons.forEach(button => {
@@ -54,5 +54,7 @@ buttons.forEach(button => {
     computerValue = getComputerChoice(['Rock', 'Paper', 'Scissor']);
     playRound(this.textContent, computerValue);
     gameWinner(computerScore, playerScore);
+    console.log(computerScore)
+    console.log(playerScore)
   });
 });
