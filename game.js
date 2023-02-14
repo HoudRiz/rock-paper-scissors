@@ -1,7 +1,9 @@
 const buttons = Array.from(document.querySelectorAll('button'));
 const button = document.querySelector('button');
 const restartButton = document.querySelector('.restart-button')
-
+const scoreDisplayP = document.querySelector('.player-score')
+const scoreDisplayC = document.querySelector('.computer-score')
+const winner = document.querySelector('.winner')
 
 // machine choosing function
 let getComputerChoice = function (choiceOption) {
@@ -32,12 +34,12 @@ function playRound(playerSelection , computerSelection){
 //finds out who wins the game
 let gameWinner= function (computerScore, playerScore) {
   if (computerScore >= 5) {
-    console.log('The computer has won the game');
-    restart()
+    winner.innerHTML = 'The computer has won the game';
+    
     
 } else if (playerScore >= 5) {
-    console.log('The player has won the game');
-    restart()
+    winner.innerHTML = 'The player has won the game';
+    
   
 } 
 };
@@ -45,6 +47,7 @@ let gameWinner= function (computerScore, playerScore) {
 function restart () {
   computerScore = 0
   playerScore = 0
+  winner.innerHTML = '';
 }
 
 //loop to make game into 5 rounds
@@ -58,6 +61,8 @@ buttons.forEach(button => {
     playRound(this.textContent, computerValue);
     gameWinner(computerScore, playerScore);
     console.log(computerScore)
-    console.log(playerScore)
+    scoreDisplayP.innerHTML = playerScore;
+    scoreDisplayC.innerHTML = computerScore;
+
   });
 });
