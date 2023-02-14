@@ -4,7 +4,7 @@ const restartButton = document.querySelector('.restart-button')
 const scoreDisplayP = document.querySelector('.player-score')
 const scoreDisplayC = document.querySelector('.computer-score')
 const winner = document.querySelector('.winner')
-
+const result = document.querySelector('.result')
 // machine choosing function
 let getComputerChoice = function (choiceOption) {
   let random =  Math.floor(Math.random() * choiceOption.length);
@@ -19,15 +19,15 @@ function playRound(playerSelection , computerSelection){
   
   if ((playerSelection == 'Rock') || (playerSelection == 'Paper') || (playerSelection == 'Scissor')){
     if (playerSelection == computerSelection) {
-      console.log('It is a draw!');  
+      result.innerHTML = 'It is a draw!';  
     }   else if ((playerSelection  == 'Rock' && computerSelection == 'Scissor') ||
     (playerSelection  == 'Paper' && computerSelection == 'Rock') ||
     (playerSelection  == 'Scissor' && computerSelection == 'Paper'))
     {
-      console.log (`you win! ${playerSelection} beats ${computerSelection}`)
+      result.innerHTML = `you win! ${playerSelection} beats ${computerSelection}`;
       playerScore++
     }   else {
-      console.log (`you have lost! ${computerSelection} beats ${playerSelection}`);
+      result.innerHTML = `you have lost! ${computerSelection} beats ${playerSelection}`;
       computerScore++
     }}}
 
@@ -60,7 +60,6 @@ buttons.forEach(button => {
     computerValue = getComputerChoice(['Rock', 'Paper', 'Scissor']);
     playRound(this.textContent, computerValue);
     gameWinner(computerScore, playerScore);
-    console.log(computerScore)
     scoreDisplayP.innerHTML = playerScore;
     scoreDisplayC.innerHTML = computerScore;
 
