@@ -22,40 +22,41 @@ function playRound(playerSelection , computerSelection){
   
   if ((playerSelection == 'Rock') || (playerSelection == 'Paper') || (playerSelection == 'Scissor')){
     if (playerSelection == computerSelection) {
-      alert('It is a draw!');  
+      console.log('It is a draw!');  
     }   else if ((playerSelection  == 'Rock' && computerSelection == 'Scissor') ||
     (playerSelection  == 'Paper' && computerSelection == 'Rock') ||
     (playerSelection  == 'Scissor' && computerSelection == 'Paper'))
     {
-      alert (`you win! ${playerSelection} beats ${computerSelection}`)
+      console.log (`you win! ${playerSelection} beats ${computerSelection}`)
       playerScore++
     }   else {
-      alert (`you have lost! ${computerSelection} beats ${playerSelection}`);
+      console.log (`you have lost! ${computerSelection} beats ${playerSelection}`);
       computerScore++
-    }}else{
-      alert ('The input you have entered is invalid.')
-}}
+    }}}
 
 //finds out who wins the game
 let gameWinner= function (computerScore, playerScore) {
   if (computerScore > 5) {
     console.log('The computer has won the game');
+
     
 } else if (playerScore > 5) {
-  console.log('The player has won the game');
+    console.log('The player has won the game');
+   
   
 } 
 };
 
 //loop to make game into 5 rounds
 function game(){
-  let computerValue =getComputerChoice(['Rock','Paper', 'Scissor']);
+  let computerValue = getComputerChoice(['Rock','Paper', 'Scissor']);
   buttons.forEach(button => {
     button.addEventListener('click' , function(){
       playRound (this.textContent,computerValue)
     }) 
     })
+    
+  }
+ 
+  game()
   gameWinner(computerScore,playerScore)
-
-}
-game()
