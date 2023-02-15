@@ -1,6 +1,7 @@
 body{
     font-family: serif;
     background-color: #479dbe;
+    text-shadow: 1px 1px 8px rgb(68, 68, 68);
 }
 
 
@@ -38,6 +39,7 @@ body{
     text-align: center;
     font-size: 24px;
     color: aliceblue;
+    text-shadow: 1px 1px 8px black;
 }
 .game-end {
     display: flex;
@@ -57,4 +59,5 @@ body{
     color: aliceblue;
     font-weight: 600;
     font-size: 16px;
+    text-shadow: 1px 1px 8px black;
 }
