@@ -19,7 +19,7 @@ function playRound(playerSelection , computerSelection){
   
     if (playerSelection == computerSelection) {
       result.innerText = 'It is a draw!';  
-    }   else if ((playerSelection  == '🪨' && computerSelection == '✂️') ||
+    }   else if ((playerSelection  == '🗿' && computerSelection == '✂️') ||
     (playerSelection  == '📄' && computerSelection == 'Rock') ||
     (playerSelection  == '✂️' && computerSelection == '📄'))
     {
@@ -59,7 +59,7 @@ buttons.forEach(button => {
     if ((computerScore == 5) || (playerScore == 5)){
       return;
     }
-    computerValue = getComputerChoice(['🪨', '📄', '✂️']);
+    computerValue = getComputerChoice(['🗿', '📄', '✂️']);
     playRound(this.textContent, computerValue);
     gameWinner(computerScore, playerScore);
     scoreDisplayP.innerText = playerScore;
