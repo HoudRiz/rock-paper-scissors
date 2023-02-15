@@ -17,19 +17,18 @@ playerScore = 0 //initializing score of player
 //function  for winning or losing
 function playRound(playerSelection , computerSelection){
   
-  if ((playerSelection == 'Rock') || (playerSelection == 'Paper') || (playerSelection == 'Scissor')){
     if (playerSelection == computerSelection) {
       result.innerText = 'It is a draw!';  
-    }   else if ((playerSelection  == 'Rock' && computerSelection == 'Scissor') ||
-    (playerSelection  == 'Paper' && computerSelection == 'Rock') ||
-    (playerSelection  == 'Scissor' && computerSelection == 'Paper'))
+    }   else if ((playerSelection  == '🪨' && computerSelection == '✂️') ||
+    (playerSelection  == '📄' && computerSelection == 'Rock') ||
+    (playerSelection  == '✂️' && computerSelection == '📄'))
     {
       result.innerText = `you win! ${playerSelection} beats ${computerSelection}`;
       playerScore++
     }   else {
       result.innerText = `you have lost! ${computerSelection} beats ${playerSelection}`;
       computerScore++
-    }}}
+    }}
 
 //finds out who wins the game
 let gameWinner= function (computerScore, playerScore) {
@@ -60,7 +59,7 @@ buttons.forEach(button => {
     if ((computerScore == 5) || (playerScore == 5)){
       return;
     }
-    computerValue = getComputerChoice(['Rock', 'Paper', 'Scissor']);
+    computerValue = getComputerChoice(['🪨', '📄', '✂️']);
     playRound(this.textContent, computerValue);
     gameWinner(computerScore, playerScore);
     scoreDisplayP.innerText = playerScore;
