@@ -16,11 +16,11 @@ playerScore = 0 //initializing score of player
 
 //function  for winning or losing
 function playRound(playerSelection , computerSelection){
-  
+  if ((playerSelection == '🗿') || (playerSelection == '📄') || (playerSelection == '✂️'))
     if (playerSelection == computerSelection) {
       result.innerText = 'It is a draw!';  
     }   else if ((playerSelection  == '🗿' && computerSelection == '✂️') ||
-    (playerSelection  == '📄' && computerSelection == 'Rock') ||
+    (playerSelection  == '📄' && computerSelection == '🗿') ||
     (playerSelection  == '✂️' && computerSelection == '📄'))
     {
       result.innerText = `you win! ${playerSelection} beats ${computerSelection}`;
