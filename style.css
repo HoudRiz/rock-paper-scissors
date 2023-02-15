@@ -1,6 +1,6 @@
 body{
     font-family: serif;
-    background-color: #87CEEB;
+    background-color: #479dbe;
 }
 
 
@@ -20,7 +20,14 @@ body{
     font-weight: 900;
     font-size: 30px;
 }
+.result {
+    display: flex;
+    margin: 50px;
+    justify-content: center;
+    font-size: 24px;
+    color: aliceblue;
 
+}
 
 .counter {
     display: flex;
@@ -28,4 +35,6 @@ body{
     width: 75%; 
     margin:  auto;
     text-align: center;
+    font-size: 24px;
+    color: aliceblue;
 }
