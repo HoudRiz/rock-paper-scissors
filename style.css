@@ -1,7 +1,7 @@
 body{
     font-family: serif;
     background-color: #479dbe;
-    text-shadow: 1px 1px 8px rgb(68, 68, 68);
+    text-shadow: 1px 1px 8px black;
 }
 
 
@@ -14,7 +14,7 @@ body{
 }
 .container button{
     padding: 40px;
-    background-image: radial-gradient( #efef12,#ffa500bf);
+    background-image: radial-gradient( #f0cd06 ,rgb(237 87 0 / 69%));
     border: 5px solid aliceblue;
     border-radius: 10px;
     color: aliceblue;
