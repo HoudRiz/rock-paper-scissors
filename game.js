@@ -57,6 +57,9 @@ restartButton.addEventListener ('click' , function() {
 let computerValue;
 buttons.forEach(button => {
   button.addEventListener('click', function() {
+    if ((computerScore == 5) || (playerScore == 5)){
+      return;
+    }
     computerValue = getComputerChoice(['Rock', 'Paper', 'Scissor']);
     playRound(this.textContent, computerValue);
     gameWinner(computerScore, playerScore);
