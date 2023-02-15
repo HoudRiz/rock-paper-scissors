@@ -1,3 +1,11 @@
-div.counter {
+body{
+    font-family: serif;
+}
+
+.counter {
     display: flex;
+    justify-content: space-between;
+    width: 75%; 
+    margin:  auto;
+    text-align: center;
 }
