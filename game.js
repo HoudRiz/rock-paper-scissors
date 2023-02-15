@@ -47,6 +47,7 @@ function restart () {
   computerScore = 0
   playerScore = 0
   winner.innerText = '';
+  result.innerText = '';
 }
 
 //loop to make game into 5 rounds
