@@ -1,7 +1,7 @@
 body{
     font-family: Roboto,sans-serif;
     background-color: #479dbe;
-    text-shadow: 1px 1px 8px black;
+    text-shadow: 1px 1px 8px #544d4d;
     color: aliceblue;
 }
  h1{
@@ -43,7 +43,7 @@ body{
     text-align: center;
     font-size: 24px;
     color: aliceblue;
-    text-shadow: 1px 1px 8px black;
+    text-shadow: 1px 1px 8px #544d4d;
 }
 .game-end {
     display: flex;
@@ -63,5 +63,5 @@ body{
     color: aliceblue;
     font-weight: 600;
     font-size: 16px;
-    text-shadow: 1px 1px 8px black;
+    text-shadow: 1px 1px 8px #544d4d;
 }
