@@ -1,6 +1,26 @@
 body{
     font-family: serif;
+    background-color: #87CEEB;
 }
+
+
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    width: 75%;
+    margin:  50px auto;
+}
+.container button{
+    padding: 50px;
+    background-color: #FFD90F;
+    border: 3px solid aliceblue;
+    border-radius: 10px;
+    color: aliceblue;
+    font-weight: 900;
+    font-size: 30px;
+}
+
 
 .counter {
     display: flex;
