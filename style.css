@@ -1,9 +1,13 @@
 body{
-    font-family: serif;
+    font-family: Roboto,sans-serif;
     background-color: #479dbe;
     text-shadow: 1px 1px 8px black;
+    color: aliceblue;
 }
-
+ h1{
+    display: flex;
+    justify-content: center;
+ }
 
 
 .container {
