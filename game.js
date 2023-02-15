@@ -37,7 +37,7 @@ let gameWinner= function (computerScore, playerScore) {
     
     
 } else if (playerScore >= 5) {
-    winner.innerText = 'The player has won the game';
+    winner.innerText = 'You have won the game!';
     
   
 } 
