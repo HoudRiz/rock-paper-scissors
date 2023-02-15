@@ -19,26 +19,26 @@ function playRound(playerSelection , computerSelection){
   
   if ((playerSelection == 'Rock') || (playerSelection == 'Paper') || (playerSelection == 'Scissor')){
     if (playerSelection == computerSelection) {
-      result.innerHTML = 'It is a draw!';  
+      result.innerText = 'It is a draw!';  
     }   else if ((playerSelection  == 'Rock' && computerSelection == 'Scissor') ||
     (playerSelection  == 'Paper' && computerSelection == 'Rock') ||
     (playerSelection  == 'Scissor' && computerSelection == 'Paper'))
     {
-      result.innerHTML = `you win! ${playerSelection} beats ${computerSelection}`;
+      result.innerText = `you win! ${playerSelection} beats ${computerSelection}`;
       playerScore++
     }   else {
-      result.innerHTML = `you have lost! ${computerSelection} beats ${playerSelection}`;
+      result.innerText = `you have lost! ${computerSelection} beats ${playerSelection}`;
       computerScore++
     }}}
 
 //finds out who wins the game
 let gameWinner= function (computerScore, playerScore) {
   if (computerScore >= 5) {
-    winner.innerHTML = 'The computer has won the game';
+    winner.innerText = 'The computer has won the game';
     
     
 } else if (playerScore >= 5) {
-    winner.innerHTML = 'The player has won the game';
+    winner.innerText = 'The player has won the game';
     
   
 } 
@@ -47,7 +47,7 @@ let gameWinner= function (computerScore, playerScore) {
 function restart () {
   computerScore = 0
   playerScore = 0
-  winner.innerHTML = '';
+  winner.innerText = '';
 }
 
 //loop to make game into 5 rounds
@@ -63,8 +63,8 @@ buttons.forEach(button => {
     computerValue = getComputerChoice(['Rock', 'Paper', 'Scissor']);
     playRound(this.textContent, computerValue);
     gameWinner(computerScore, playerScore);
-    scoreDisplayP.innerHTML = playerScore;
-    scoreDisplayC.innerHTML = computerScore;
+    scoreDisplayP.innerText = playerScore;
+    scoreDisplayC.innerText = computerScore;
 
   });
 });
